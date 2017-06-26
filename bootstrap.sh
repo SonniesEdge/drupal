@@ -46,3 +46,10 @@ perl -0777 -i.original -pe 's/Options Indexes FollowSymLinks\n\tAllowOverride No
 
 # Restart Apache 
 systemctl restart apache2
+
+apt-get install zip unzip git
+
+# Install Drush
+wget http://files.drush.org/drush.phar
+chmod +x drush.phar
+mv drush.phar /usr/local/bin/drush
