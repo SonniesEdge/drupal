@@ -10,29 +10,22 @@ apt-get -y install zsh htop vim
 # ufw allow 3306
 # ufw allow 80
 
-
-
-# # Link the base apache folder to the vagrant shared folder
-# if ! [ -L /var/www ]; then
-#   rm -rf /var/www
-#   ln -fs /vagrant/htdocs /var/www
-# fi
-
 # Install Apache
 apt-get -y install php7.0 libapache2-mod-php7.0
 
 
 # Install MySQL
-
-# Allow unattended install of MySQL
+## Allow unattended install of MySQL
 export DEBIAN_FRONTEND=noninteractive
 MYSQL_ROOT_PASSWORD='root' 
 export DEBIAN_FRONTEND="noninteractive"
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password password root"
 sudo debconf-set-selections <<< "mysql-server mysql-server/root_password_again password root"
+
+## Install MySQL
 sudo apt-get install -y mysql-server mysql-client
 
-# Create database
+## Create database
 echo "create database sonniesedge" | mysql -uroot -proot
 
 # Install PHP
