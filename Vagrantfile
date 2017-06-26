@@ -8,7 +8,7 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "bento/ubuntu-16.04"
   config.vm.synced_folder "htdocs/", "/var/www/html", id: "vagrant-root", 
-  owner: "ubuntu", 
+  owner: "vagrant", 
   group: "www-data", 
   mount_options: ["dmode=774,fmode=774"]
   # config.vm.network :forwarded_port, guest: 80, host: 4567
