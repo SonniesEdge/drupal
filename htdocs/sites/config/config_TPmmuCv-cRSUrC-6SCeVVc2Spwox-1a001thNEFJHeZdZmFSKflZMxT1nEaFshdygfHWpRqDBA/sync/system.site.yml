@@ -1,0 +1,14 @@
+uuid: 2827e681-b404-485d-a894-2b61ceba31e7
+name: sonniesedge
+mail: charlie@sonniesedge.co.uk
+slogan: ''
+page:
+  403: ''
+  404: ''
+  front: /node
+admin_compact_mode: false
+weight_select_max: 100
+langcode: en
+default_langcode: en
+_core:
+  default_config_hash: AyT9s8OUcclfALRE_imByOMgtZ19eOlqdF6zI3p7yqo
