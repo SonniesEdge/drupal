@@ -13,7 +13,9 @@ Vagrant.configure("2") do |config|
   mount_options: ["dmode=774,fmode=774"]
   # config.vm.network :forwarded_port, guest: 80, host: 4567
   config.vm.network :private_network, ip: "192.168.192.10"
+  config.vm.provision :shell, :inline => "sudo rm /etc/localtime && sudo ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime", run: "always"
   config.vm.provision :shell, path: "bootstrap.sh"
+  
 
 
   # The most common configuration options are documented and commented below.

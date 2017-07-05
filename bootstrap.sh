@@ -1,9 +1,7 @@
 #!/usr/bin/env bash
 
 apt-get update
-echo "Europe/Berlin" > /etc/timezone
-dpkg-reconfigure -f noninteractive tzdata
-apt-get -y install zsh htop vim
+apt-get -y install zsh htop vim ntp
 
 # ufw enable
 # ufw allow 22
